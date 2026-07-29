@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ASLUCKYY STORE - Premium Gaming Marketplace for Free Fire IDs, YouTube Channels, and Instagram Accounts. Fast, safe, and secure deals.">
+  <meta name="keywords" content="ASLUCKYY STORE, Gaming Marketplace, Free Fire IDs, Buy YouTube Channels, Buy Instagram Accounts, Free Fire Account Sale">
+  <meta name="author" content="ASLUCKYY STORE">
+  <meta name="theme-color" content="#ff003c">
+
+  <!-- Open Graph / Social Media Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ASLUCKYY STORE - Premium Gaming Marketplace">
+  <meta property="og:description" content="Buy and Sell Free Fire IDs, YouTube Channels, and Instagram Accounts securely.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80">
+
+  <title>ASLUCKYY STORE | Premium Gaming Marketplace</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="glow-spinner"></div>
+      <h2 class="loader-logo">ASLUCKYY <span>STORE</span></h2>
+      <p class="loader-sub">Loading Marketplace...</p>
+    </div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar-header" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="brand-logo">
+        <i class="fa-solid fa-gamepad logo-icon"></i>
+        <span>ASLUCKYY</span> STORE
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-item active"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#categories" class="nav-item"><i class="fa-solid fa-layer-group"></i> Categories</a>
+        <a href="#products" class="nav-item"><i class="fa-solid fa-store"></i> Products</a>
+        <a href="#testimonials" class="nav-item"><i class="fa-solid fa-star"></i> Reviews</a>
+        <a href="#faq" class="nav-item"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+        <a href="#contact" class="nav-item"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <button class="admin-login-btn" id="openAdminModalBtn"><i class="fa-solid fa-user-shield"></i> Admin</button>
+      </nav>
+
+      <div class="hamburger" id="hamburgerBtn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> 100% Trusted & Secure Marketplace</div>
+          <h1 class="hero-title">Elevate Your Gaming & Digital Assets</h1>
+          <p class="hero-subtitle">Welcome to <strong>ASLUCKYY STORE</strong>. Your ultimate hub to buy verified Free Fire IDs, high-subscriber YouTube Channels, and monetized Instagram Accounts instantly.</p>
+          
+          <!-- Search & Filter Controls -->
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Search accounts, UID, subscriber count...">
+            <button id="searchBtn" class="glow-btn">Search</button>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#products" class="btn primary-btn"><i class="fa-solid fa-fire"></i> Explore Inventory</a>
+            <a href="https://wa.me/918679558714" target="_blank" class="btn secondary-btn"><i class="fa-brands fa-whatsapp"></i> Instant Chat</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+      <div class="section-title-wrap">
+        <h2 class="section-title">BROWSE <span>CATEGORIES</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="category-grid">
+        <div class="category-card filter-btn active" data-category="all">
+          <i class="fa-solid fa-border-all cat-icon"></i>
+          <h3>All Items</h3>
+          <p class="cat-count" id="count-all">0 Items</p>
+        </div>
+
+        <div class="category-card filter-btn" data-category="freefire">
+          <i class="fa-solid fa-crosshairs cat-icon"></i>
+          <h3>Free Fire IDs</h3>
+          <p class="cat-count" id="count-freefire">0 Items</p>
+        </div>
+
+        <div class="category-card filter-btn" data-category="youtube">
+          <i class="fa-brands fa-youtube cat-icon"></i>
+          <h3>YouTube Channels</h3>
+          <p class="cat-count" id="count-youtube">0 Items</p>
+        </div>
+
+        <div class="category-card filter-btn" data-category="instagram">
+          <i class="fa-brands fa-instagram cat-icon"></i>
+          <h3>Instagram Accounts</h3>
+          <p class="cat-count" id="count-instagram">0 Items</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured & All Products Section -->
+    <section class="products-section" id="products">
+      <div class="section-title-wrap">
+        <h2 class="section-title">FEATURED <span>INVENTORY</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Dynamic Product Cards will be rendered here by script.js -->
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="section-title-wrap">
+        <h2 class="section-title">CUSTOMER <span>REVIEWS</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card glass-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Bought a Free Fire ID with Hip Hop bundle. Process took less than 10 minutes via WhatsApp. ASLUCKYY STORE is 100% legit!"</p>
+          <div class="user-info">
+            <div class="user-avatar">R</div>
+            <div>
+              <h4>Rahul Sharma</h4>
+              <span>Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Purchased a 50k subscriber gaming channel. Full login access transfer was completely seamless. Highly recommended store!"</p>
+          <div class="user-info">
+            <div class="user-avatar">A</div>
+            <div>
+              <h4>Aman Verma</h4>
+              <span>Content Creator</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Instant reply on WhatsApp and very polite owner. Got my IG account transferred within 5 minutes of payment."</p>
+          <div class="user-info">
+            <div class="user-avatar">V</div>
+            <div>
+              <h4>Vikram Patel</h4>
+              <span>Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="section-title-wrap">
+        <h2 class="section-title">FREQUENTLY ASKED <span>QUESTIONS</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item glass-card">
+          <div class="faq-question">
+            <h3>How do I complete a purchase?</h3>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Click on the <strong>"Buy Now"</strong> button on any product. It will direct you to our official WhatsApp chat (+91 8679558714) with pre-filled details. Our team will guide you through payment and instant account transfer.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass-card">
+          <div class="faq-question">
+            <h3>Are all listed accounts safe and verified?</h3>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. Every account listed on ASLUCKYY STORE undergoes a rigorous security verification process before being posted. We offer 100% full access transfer guarantee.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass-card">
+          <div class="faq-question">
+            <h3>What payment methods are supported?</h3>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We accept all major payment modes including UPI (PhonePe, Google Pay, Paytm), Bank Transfers, and Crypto payments for international clients.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="section-title-wrap">
+        <h2 class="section-title">GET IN <span>TOUCH</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="contact-container glass-card">
+        <div class="contact-info">
+          <h3>Need Help or Want to Sell Your Account?</h3>
+          <p>Reach out to us directly for quick deals, support, or selling your gaming/social accounts at top market prices.</p>
+          
+          <div class="contact-detail-item">
+            <i class="fa-brands fa-whatsapp contact-icon"></i>
+            <div>
+              <h4>WhatsApp Support</h4>
+              <p>+91 8679558714</p>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <i class="fa-solid fa-clock contact-icon"></i>
+            <div>
+              <h4>Working Hours</h4>
+              <p>24/7 Available for Deals</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-action">
+          <a href="https://wa.me/918679558714?text=Hello%20ASLUCKYY%20STORE,%20I%20have%20a%20query." target="_blank" class="btn primary-btn btn-block">
+            <i class="fa-brands fa-whatsapp"></i> Connect on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2026 <strong>ASLUCKYY STORE</strong>. All Rights Reserved. Built for Gamers.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <a href="https://wa.me/918679558714?text=Hello%20ASLUCKYY%20STORE,%20I%20want%20to%20buy/sell%20an%20account." class="floating-wa-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button id="backToTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Admin Modal (Login + Dashboard) -->
+  <div class="modal-overlay" id="adminModal">
+    <div class="modal-content glass-card">
+      <button class="close-modal-btn" id="closeAdminModalBtn">&times;</button>
+
+      <!-- Step 1: Admin Login View -->
+      <div id="adminLoginView">
+        <h2 class="modal-title"><i class="fa-solid fa-lock"></i> Admin <span>Portal</span></h2>
+        <form id="adminLoginForm">
+          <div class="form-group">
+            <label for="adminEmail">Email Address</label>
+            <input type="email" id="adminEmail" required placeholder="admin@asluckyystore.com">
+          </div>
+          <div class="form-group">
+            <label for="adminPassword">Password</label>
+            <input type="password" id="adminPassword" required placeholder="••••••••">
+          </div>
+          <button type="submit" class="btn primary-btn btn-block">Login to Dashboard</button>
+        </form>
+      </div>
+
+      <!-- Step 2: Admin Dashboard View -->
+      <div id="adminDashboardView" class="hidden">
+        <div class="dash-header">
+          <h2><i class="fa-solid fa-gauge"></i> Inventory <span>Manager</span></h2>
+          <button id="adminLogoutBtn" class="btn secondary-btn sm-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+        </div>
+
+        <!-- Add / Edit Product Form -->
+        <form id="productForm" class="product-form">
+          <input type="hidden" id="productId">
+          <h3 id="formTitle">Add New Inventory Item</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prodTitle">Title</label>
+              <input type="text" id="prodTitle" placeholder="e.g. Free Fire Level 72 ID" required>
+            </div>
+            <div class="form-group">
+              <label for="prodCategory">Category</label>
+              <select id="prodCategory" required>
+                <option value="freefire">Free Fire ID</option>
+                <option value="youtube">YouTube Channel</option>
+                <option value="instagram">Instagram Account</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prodPrice">Price (₹)</label>
+              <input type="number" id="prodPrice" placeholder="2999" required>
+            </div>
+            <div class="form-group">
+              <label for="prodStatus">Status</label>
+              <select id="prodStatus" required>
+                <option value="Available">Available</option>
+                <option value="Sold">Sold</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group checkbox-group">
+              <label for="prodFeatured">
+                <input type="checkbox" id="prodFeatured"> Mark as Featured
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="prodImageFile">Product Image (Upload to Firebase)</label>
+            <input type="file" id="prodImageFile" accept="image/*">
+            <small>Or paste direct Image URL below:</small>
+            <input type="url" id="prodImageUrl" placeholder="https://example.com/image.jpg">
+          </div>
+
+          <div class="form-group">
+            <label for="prodDescription">Description & Details</label>
+            <textarea id="prodDescription" rows="3" placeholder="Includes Rare Bundles, Gun Skins, Full Email Access..." required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="saveProductBtn" class="btn primary-btn"><i class="fa-solid fa-floppy-disk"></i> Save Item</button>
+            <button type="button" id="cancelEditBtn" class="btn secondary-btn hidden">Cancel Edit</button>
+          </div>
+        </form>
+
+        <hr class="divider">
+
+        <h3>Current Managed Inventory</h3>
+        <div class="admin-products-list" id="adminProductsList">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Firebase Scripts (v9 Compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-storage-compat.js"></script>
+
+  <!-- Application Script -->
+  <script src="script.js"></script>
+</body>
+                                                    </html>
+  
